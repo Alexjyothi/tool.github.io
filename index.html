@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Image to PDF Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Advanced Image to PDF Converter</h1>
+            <p>Transform your images into professional PDF documents with advanced editing features. All processing happens in your browser!</p>
+            
+            <div class="feature-list">
+                <span class="feature-badge">Drag & Drop</span>
+                <span class="feature-badge">Custom Borders</span>
+                <span class="feature-badge">Multiple Layouts</span>
+                <span class="feature-badge">Image Rotation</span>
+                <span class="feature-badge">No Server Upload</span>
+                <span class="feature-badge">AdSense Integration</span>
+            </div>
+        </header>
+        
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-placeholder" id="bannerAd">
+                <!-- AdSense will be inserted here -->
+                Google AdSense Banner (728x90)
+            </div>
+        </div>
+        
+        <div class="app-container">
+            <div class="card upload-area">
+                <div class="drop-zone" id="dropZone">
+                    <div class="upload-icon">📁</div>
+                    <h3>Upload Your Images</h3>
+                    <p>Drag & drop images here or click to browse files</p>
+                    <button class="btn" id="uploadBtn">Select Images</button>
+                    <input type="file" id="fileInput" accept="image/*" multiple>
+                </div>
+                
+                <div class="image-preview-container">
+                    <div class="preview-title">
+                        <h3>Your Images</h3>
+                        <button class="btn btn-outline" id="clearBtn">Clear All</button>
+                    </div>
+                    <div class="image-list" id="imageList">
+                        <div class="empty-state" id="emptyState">
+                            <div class="empty-icon">🖼️</div>
+                            <p>No images uploaded yet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            
+            <div class="card preview-area">
+                <div class="options-panel">
+                    <h2>PDF Settings</h2>
+                    
+                    <div class="option-group">
+                        <h3><span class="icon">📄</span> Page Layout</h3>
+                        <div class="form-group">
+                            <label for="pageSize">Page Size</label>
+                            <select id="pageSize" class="form-control">
+                                <option value="a4">A4 (210 × 297mm)</option>
+                                <option value="letter">Letter (8.5 × 11in)</option>
+                                <option value="legal">Legal (8.5 × 14in)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pageOrientation">Orientation</label>
+                            <select id="pageOrientation" class="form-control">
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="imageLayout">Image Layout</label>
+                            <select id="imageLayout" class="form-control">
+                                <option value="full">Full Page</option>
+                                <option value="single">Single Image Per Page</option>
+                                <option value="double">Two Images Per Page</option>
+                                <option value="quad">Four Images Per Page</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="option-group">
+                        <h3><span class="icon">🖌️</span> Border Settings</h3>
+                        <div class="form-group">
+                            <label for="borderWidth">Border Width</label>
+                            <div class="range-container">
+                                <input type="range" id="borderWidth" min="0" max="50" value="5" class="form-control">
+                                <span class="range-value" id="borderWidthValue">5px</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="borderColor">Border Color</label>
+                            <div class="color-picker-container">
+                                <input type="color" id="borderColor" value="#4361ee">
+                                <div class="color-preview" id="colorPreview" style="background-color: #4361ee;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="borderStyle">Border Style</label>
+                            <select id="borderStyle" class="form-control">
+                                <option value="solid">Solid</option>
+                                <option value="dashed">Dashed</option>
+                                <option value="dotted">Dotted</option>
+                                <option value="double">Double</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="option-group">
+                        <h3><span class="icon">🖼️</span> Image Settings</h3>
+                        <div class="form-group">
+                            <label for="imageQuality">Image Quality</label>
+                            <div class="range-container">
+                                <input type="range" id="imageQuality" min="50" max="100" value="90" class="form-control">
+                                <span class="range-value" id="imageQualityValue">90%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="imageRotation">Rotation</label>
+                            <div class="range-container">
+                                <input type="range" id="imageRotation" min="0" max="360" value="0" class="form-control">
+                                <span class="range-value" id="imageRotationValue">0°</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="actions">
+                        <button class="btn" id="generateBtn">
+                            <span>✨ Generate PDF</span>
+                        </button>
+                        <button class="btn btn-outline" id="resetBtn">Reset Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-placeholder" id="footerAd">
+                <!-- AdSense will be inserted here -->
+                Google AdSense Banner (728x90)
+            </div>
+        </div>
+        
+        <div class="adsense-settings">
+            <h4><span class="icon">⚙️</span> AdSense Configuration</h4>
+            <div class="adsense-form">
+                <div class="adsense-input-group">
+                    <label for="pubId">Publisher ID</label>
+                    <input type="text" id="pubId" class="adsense-input" placeholder="ca-pub-xxxxxxxxxxxxxxx">
+                </div>
+                <div class="adsense-input-group">
+                    <label for="bannerId">Banner Ad Slot ID</label>
+                    <input type="text" id="bannerId" class="adsense-input" placeholder="xxxxxxxxxx">
+                </div>
+                <button class="adsense-save-btn" id="saveAdBtn">Save AdSense Settings</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Advanced Image to PDF Converter | All processing happens in your browser | No data is sent to any server</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
