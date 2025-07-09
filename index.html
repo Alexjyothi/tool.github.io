@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4311381338646206"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4311381338646206"
      crossorigin="anonymous"></script>
 <!-- website tools -->
 <ins class="adsbygoogle"
@@ -9,165 +9,145 @@
      data-ad-client="ca-pub-4311381338646206"
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Advanced Image to PDF Converter</h1>
-            <p>Transform your images into professional PDF documents with advanced editing features. All processing happens in your browser!</p>
-            
-            <div class="feature-list">
-                <span class="feature-badge">Drag & Drop</span>
-                <span class="feature-badge">Custom Borders</span>
-                <span class="feature-badge">Multiple Layouts</span>
-                <span class="feature-badge">Image Rotation</span>
-                <span class="feature-badge">No Server Upload</span>
-                <span class="feature-badge">AdSense Integration</span>
-            </div>
-        </header>
-        
-        <div class="ad-container">
-            <div class="ad-label">Advertisement</div>
-            <div class="ad-placeholder" id="bannerAd">
-                <!-- AdSense will be inserted here -->
-                Google AdSense Banner (728x90)
+    <header class="rainbow-header">
+        <div class="header-content">
+            <h1><span class="rainbow-text">Rainbow</span>Tools</h1>
+            <p class="tagline">Your colorful collection of essential online utilities</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search tools...">
+                <button><i class="fas fa-search"></i></button>
             </div>
         </div>
-        
-        <div class="app-container">
-            <div class="card upload-area">
-                <div class="drop-zone" id="dropZone">
-                    <div class="upload-icon">📁</div>
-                    <h3>Upload Your Images</h3>
-                    <p>Drag & drop images here or click to browse files</p>
-                    <button class="btn" id="uploadBtn">Select Images</button>
-                    <input type="file" id="fileInput" accept="image/*" multiple>
+        <div class="color-wave"></div>
+    </header>
+
+    <main>
+        <section class="categories">
+            <div class="category-card" style="--card-color: #FF6B6B;">
+                <div class="category-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h3>Calculators</h3>
+                <p>Scientific, financial, and health calculators</p>
+            </div>
+            
+            <div class="category-card" style="--card-color: #4ECDC4;">
+                <div class="category-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h3>Converters</h3>
+                <p>Unit, currency, and time converters</p>
+            </div>
+            
+            <div class="category-card" style="--card-color: #45B7D1;">
+                <div class="category-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Generators</h3>
+                <p>Password, QR code, and text generators</p>
+            </div>
+            
+            <div class="category-card" style="--card-color: #A37EBA;">
+                <div class="category-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Translators</h3>
+                <p>Text translation and language tools</p>
+            </div>
+        </section>
+
+        <section class="popular-tools">
+            <h2 class="section-title">Most Popular Tools</h2>
+            <div class="tool-grid">
+                <!-- Tool 1 -->
+                <div class="tool-card" style="--tool-color: #FF9E7D;">
+                    <div class="tool-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Percentage Calculator</h3>
+                    <div class="tool-content">
+                        <input type="number" placeholder="Number">
+                        <input type="number" placeholder="Percent">
+                        <button>Calculate</button>
+                        <div class="result">Result: <span>0</span></div>
+                    </div>
                 </div>
                 
-                <div class="image-preview-container">
-                    <div class="preview-title">
-                        <h3>Your Images</h3>
-                        <button class="btn btn-outline" id="clearBtn">Clear All</button>
+                <!-- Tool 2 -->
+                <div class="tool-card" style="--tool-color: #A5DEE5;">
+                    <div class="tool-icon">
+                        <i class="fas fa-ruler-combined"></i>
                     </div>
-                    <div class="image-list" id="imageList">
-                        <div class="empty-state" id="emptyState">
-                            <div class="empty-icon">🖼️</div>
-                            <p>No images uploaded yet</p>
+                    <h3>Unit Converter</h3>
+                    <div class="tool-content">
+                        <select>
+                            <option>Length</option>
+                            <option>Weight</option>
+                            <option>Temperature</option>
+                        </select>
+                        <input type="number" placeholder="Value">
+                        <div class="result">Result: <span>0</span></div>
+                    </div>
+                </div>
+                
+                <!-- Tool 3 -->
+                <div class="tool-card" style="--tool-color: #CEEDC7;">
+                    <div class="tool-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Password Generator</h3>
+                    <div class="tool-content">
+                        <div class="options">
+                            <label><input type="checkbox" checked> Uppercase</label>
+                            <label><input type="checkbox" checked> Numbers</label>
+                        </div>
+                        <input type="range" min="8" max="32" value="12">
+                        <button>Generate</button>
+                        <div class="result">Password: <span>Click Generate</span></div>
+                    </div>
+                </div>
+                
+                <!-- Tool 4 -->
+                <div class="tool-card" style="--tool-color: #FFD3E0;">
+                    <div class="tool-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Color Picker</h3>
+                    <div class="tool-content">
+                        <input type="color" value="#ff0000">
+                        <div class="color-values">
+                            HEX: <span>#FF0000</span><br>
+                            RGB: <span>255, 0, 0</span>
                         </div>
                     </div>
                 </div>
-                <div class="progress-bar" id="progressBar">
-                    <div class="progress" id="progress"></div>
-                </div>
             </div>
-            
-            <div class="card preview-area">
-                <div class="options-panel">
-                    <h2>PDF Settings</h2>
-                    
-                    <div class="option-group">
-                        <h3><span class="icon">📄</span> Page Layout</h3>
-                        <div class="form-group">
-                            <label for="pageSize">Page Size</label>
-                            <select id="pageSize" class="form-control">
-                                <option value="a4">A4 (210 × 297mm)</option>
-                                <option value="letter">Letter (8.5 × 11in)</option>
-                                <option value="legal">Legal (8.5 × 14in)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="pageOrientation">Orientation</label>
-                            <select id="pageOrientation" class="form-control">
-                                <option value="portrait">Portrait</option>
-                                <option value="landscape">Landscape</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="imageLayout">Image Layout</label>
-                            <select id="imageLayout" class="form-control">
-                                <option value="full">Full Page</option>
-                                <option value="single">Single Image Per Page</option>
-                                <option value="double">Two Images Per Page</option>
-                                <option value="quad">Four Images Per Page</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="option-group">
-                        <h3><span class="icon">🖌️</span> Border Settings</h3>
-                        <div class="form-group">
-                            <label for="borderWidth">Border Width</label>
-                            <div class="range-container">
-                                <input type="range" id="borderWidth" min="0" max="50" value="5" class="form-control">
-                                <span class="range-value" id="borderWidthValue">5px</span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="borderColor">Border Color</label>
-                            <div class="color-picker-container">
-                                <input type="color" id="borderColor" value="#4361ee">
-                                <div class="color-preview" id="colorPreview" style="background-color: #4361ee;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="borderStyle">Border Style</label>
-                            <select id="borderStyle" class="form-control">
-                                <option value="solid">Solid</option>
-                                <option value="dashed">Dashed</option>
-                                <option value="dotted">Dotted</option>
-                                <option value="double">Double</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="option-group">
-                        <h3><span class="icon">🖼️</span> Image Settings</h3>
-                        <div class="form-group">
-                            <label for="imageQuality">Image Quality</label>
-                            <div class="range-container">
-                                <input type="range" id="imageQuality" min="50" max="100" value="90" class="form-control">
-                                <span class="range-value" id="imageQualityValue">90%</span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="imageRotation">Rotation</label>
-                            <div class="range-container">
-                                <input type="range" id="imageRotation" min="0" max="360" value="0" class="form-control">
-                                <span class="range-value" id="imageRotationValue">0°</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="actions">
-                        <button class="btn" id="generateBtn">
-                            <span>✨ Generate PDF</span>
-                        </button>
-                        <button class="btn btn-outline" id="resetBtn">Reset Settings</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="ad-container">
-            <div class="ad-label">Advertisement</div>
-            <div class="ad-placeholder" id="footerAd">
-                <!-- AdSense will be inserted here -->
-                Google AdSense Banner (728x90)
-            </div>
-        </div>
+        </section>
+
+        <!-- AdSense Banner -->
+</div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4311381338646206"
      crossorigin="anonymous"></script>
-
         </div>
-        
-        <footer>
-            <p>Advanced Image to PDF Converter | All processing happens in your browser | No data is sent to any server</p>
-        </footer>
-    </div>
+    </main>
 
-    <script src="script.js"></script>
+    <footer class="rainbow-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3><span class="rainbow-text">Rainbow</span>Tools</h3>
+                <p>Color your workflow with our tools</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 RainbowTools. Hosted on <a href="http://Alexjyothi.github.io/">GitHub Pages</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
